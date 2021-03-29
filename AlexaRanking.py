@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 wb= openpyxl.load_workbook('Master Microsoft list 1.xlsx')
 sheet=wb['Sheet1']
 max_row = len(sheet['A'])
-print(max_row)
+print("Checking Alexa ranking and Providing Approximately Number")
+print("total number of columns available for review",max_row)
 url = "https://www.alexa.com/siteinfo/"
 for x in range (1,max_row):
     fullurl = url+sheet.cell(row=x,column=1).value
